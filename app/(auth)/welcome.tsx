@@ -11,21 +11,23 @@ export default function WelcomeScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.heroSection}>
-        <View style={styles.logoContainer}>
-          <Text style={styles.logoText}>MexIngles</Text>
-          <Text style={styles.flagEmoji}>🇲🇽 → 🇺🇸</Text>
+      <View style={styles.content}>
+        <View style={styles.heroSection}>
+          <View style={styles.logoContainer}>
+            <Text style={styles.logoText}>MexIngles</Text>
+            <Text style={styles.flagEmoji}>🇲🇽 → 🇺🇸</Text>
+          </View>
+
+          <Text style={styles.title}>{strings.welcome}</Text>
+          <Text style={styles.subtitle}>{strings.tagline}</Text>
         </View>
 
-        <Text style={styles.title}>{strings.welcome}</Text>
-        <Text style={styles.subtitle}>{strings.tagline}</Text>
-      </View>
-
-      <View style={styles.features}>
-        <FeatureRow icon="📚" text="Lecciones interactivas paso a paso" />
-        <FeatureRow icon="🔥" text="Rachas diarias y logros" />
-        <FeatureRow icon="🗣️" text="Practica tu pronunciacion" />
-        <FeatureRow icon="🤖" text="Conversaciones con IA" />
+        <View style={styles.features}>
+          <FeatureRow icon="📚" text="Lecciones interactivas paso a paso" />
+          <FeatureRow icon="🔥" text="Rachas diarias y logros" />
+          <FeatureRow icon="🗣️" text="Practica tu pronunciacion" />
+          <FeatureRow icon="🤖" text="Conversaciones con IA" />
+        </View>
       </View>
 
       <View style={styles.buttons}>
@@ -61,10 +63,13 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary,
     padding: spacing.lg,
   },
-  heroSection: {
+  content: {
     flex: 1,
     justifyContent: 'center',
+  },
+  heroSection: {
     alignItems: 'center',
+    marginBottom: spacing.xl,
   },
   logoContainer: {
     alignItems: 'center',

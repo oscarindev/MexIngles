@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, StyleSheet, TouchableOpacity, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
 import { useRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
@@ -40,88 +40,99 @@ export default function RegisterScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <TouchableOpacity style={styles.backBtn} onPress={() => router.back()}>
-        <Ionicons name="arrow-back" size={28} color={colors.text} />
-      </TouchableOpacity>
-
-      <Text style={styles.title}>{strings.register}</Text>
-
-      {displayError && (
-        <View style={styles.errorBox}>
-          <Text style={styles.errorText}>{displayError}</Text>
-          <TouchableOpacity onPress={() => { clearError(); setLocalError(''); }}>
-            <Ionicons name="close" size={20} color={colors.incorrect} />
+      <KeyboardAvoidingView
+        style={styles.keyboardView}
+        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+      >
+        <ScrollView
+          contentContainerStyle={styles.scrollContent}
+          keyboardShouldPersistTaps="handled"
+          showsVerticalScrollIndicator={false}
+        >
+          <TouchableOpacity style={styles.backBtn} onPress={() => router.back()}>
+            <Ionicons name="arrow-back" size={28} color={colors.text} />
           </TouchableOpacity>
-        </View>
-      )}
 
-      <View style={styles.form}>
-        <View style={styles.inputGroup}>
-          <Text style={styles.label}>{strings.displayName}</Text>
-          <TextInput
-            style={styles.input}
-            value={displayName}
-            onChangeText={setDisplayName}
-            placeholder="Tu nombre"
-            placeholderTextColor={colors.textMuted}
-            autoCapitalize="words"
-          />
-        </View>
+          <Text style={styles.title}>{strings.register}</Text>
 
-        <View style={styles.inputGroup}>
-          <Text style={styles.label}>{strings.email}</Text>
-          <TextInput
-            style={styles.input}
-            value={email}
-            onChangeText={setEmail}
-            placeholder="tu@correo.com"
-            placeholderTextColor={colors.textMuted}
-            keyboardType="email-address"
-            autoCapitalize="none"
-            autoCorrect={false}
-          />
-        </View>
+          {displayError && (
+            <View style={styles.errorBox}>
+              <Text style={styles.errorText}>{displayError}</Text>
+              <TouchableOpacity onPress={() => { clearError(); setLocalError(''); }}>
+                <Ionicons name="close" size={20} color={colors.incorrect} />
+              </TouchableOpacity>
+            </View>
+          )}
 
-        <View style={styles.inputGroup}>
-          <Text style={styles.label}>{strings.password}</Text>
-          <TextInput
-            style={styles.input}
-            value={password}
-            onChangeText={setPassword}
-            placeholder="Minimo 6 caracteres"
-            placeholderTextColor={colors.textMuted}
-            secureTextEntry
-          />
-        </View>
+          <View style={styles.form}>
+            <View style={styles.inputGroup}>
+              <Text style={styles.label}>{strings.displayName}</Text>
+              <TextInput
+                style={styles.input}
+                value={displayName}
+                onChangeText={setDisplayName}
+                placeholder="Tu nombre"
+                placeholderTextColor={colors.textMuted}
+                autoCapitalize="words"
+              />
+            </View>
 
-        <View style={styles.inputGroup}>
-          <Text style={styles.label}>{strings.confirmPassword}</Text>
-          <TextInput
-            style={styles.input}
-            value={confirmPassword}
-            onChangeText={setConfirmPassword}
-            placeholder="Repite tu contrasena"
-            placeholderTextColor={colors.textMuted}
-            secureTextEntry
-          />
-        </View>
+            <View style={styles.inputGroup}>
+              <Text style={styles.label}>{strings.email}</Text>
+              <TextInput
+                style={styles.input}
+                value={email}
+                onChangeText={setEmail}
+                placeholder="tu@correo.com"
+                placeholderTextColor={colors.textMuted}
+                keyboardType="email-address"
+                autoCapitalize="none"
+                autoCorrect={false}
+              />
+            </View>
 
-        <Button
-          title={strings.register}
-          onPress={handleRegister}
-          loading={isLoading}
-          disabled={!isValid}
-          size="lg"
-          style={styles.submitBtn}
-        />
-      </View>
+            <View style={styles.inputGroup}>
+              <Text style={styles.label}>{strings.password}</Text>
+              <TextInput
+                style={styles.input}
+                value={password}
+                onChangeText={setPassword}
+                placeholder="Minimo 6 caracteres"
+                placeholderTextColor={colors.textMuted}
+                secureTextEntry
+              />
+            </View>
 
-      <View style={styles.footer}>
-        <Text style={styles.footerText}>{strings.alreadyHaveAccount} </Text>
-        <TouchableOpacity onPress={() => router.replace('/(auth)/login')}>
-          <Text style={styles.footerLink}>{strings.login}</Text>
-        </TouchableOpacity>
-      </View>
+            <View style={styles.inputGroup}>
+              <Text style={styles.label}>{strings.confirmPassword}</Text>
+              <TextInput
+                style={styles.input}
+                value={confirmPassword}
+                onChangeText={setConfirmPassword}
+                placeholder="Repite tu contrasena"
+                placeholderTextColor={colors.textMuted}
+                secureTextEntry
+              />
+            </View>
+
+            <Button
+              title={strings.register}
+              onPress={handleRegister}
+              loading={isLoading}
+              disabled={!isValid}
+              size="lg"
+              style={styles.submitBtn}
+            />
+          </View>
+
+          <View style={styles.footer}>
+            <Text style={styles.footerText}>{strings.alreadyHaveAccount} </Text>
+            <TouchableOpacity onPress={() => router.replace('/(auth)/login')}>
+              <Text style={styles.footerLink}>{strings.login}</Text>
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
+      </KeyboardAvoidingView>
     </SafeAreaView>
   );
 }
@@ -130,6 +141,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.background,
+  },
+  keyboardView: {
+    flex: 1,
+  },
+  scrollContent: {
+    flexGrow: 1,
     padding: spacing.lg,
   },
   backBtn: {

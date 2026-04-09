@@ -2,6 +2,32 @@ import { create } from 'zustand';
 import type { User } from 'firebase/auth';
 import type { UserProfile } from '../types/user';
 import { onAuthChange, getSupabaseProfile, loginUser, registerUser, logoutUser } from '../services/auth';
+import { isFirebaseConfigured } from '../services/firebase';
+
+function friendlyAuthError(err: any): string {
+  const code = err?.code || '';
+  if (!isFirebaseConfigured || code === 'auth/api-key-not-valid.-please-pass-a-valid-api-key.') {
+    return 'Firebase no esta configurado. Crea un archivo .env con tus credenciales de Firebase.';
+  }
+  switch (code) {
+    case 'auth/email-already-in-use':
+      return 'Este correo ya esta registrado.';
+    case 'auth/invalid-email':
+      return 'El correo electronico no es valido.';
+    case 'auth/weak-password':
+      return 'La contrasena es muy debil. Usa al menos 6 caracteres.';
+    case 'auth/user-not-found':
+    case 'auth/wrong-password':
+    case 'auth/invalid-credential':
+      return 'Correo o contrasena incorrectos.';
+    case 'auth/network-request-failed':
+      return 'Error de red. Verifica tu conexion a internet.';
+    case 'auth/too-many-requests':
+      return 'Demasiados intentos. Intenta de nuevo mas tarde.';
+    default:
+      return err.message || 'Error desconocido. Intenta de nuevo.';
+  }
+}
 
 interface AuthState {
   firebaseUser: User | null;
@@ -60,7 +86,7 @@ export const useAuthStore = create<AuthState>((set, get) => ({
     try {
       await loginUser(email, password);
     } catch (err: any) {
-      set({ error: err.message, isLoading: false });
+      set({ error: friendlyAuthError(err), isLoading: false });
       throw err;
     }
   },
@@ -71,7 +97,7 @@ export const useAuthStore = create<AuthState>((set, get) => ({
       const profile = await registerUser(email, password, displayName);
       set({ profile });
     } catch (err: any) {
-      set({ error: err.message, isLoading: false });
+      set({ error: friendlyAuthError(err), isLoading: false });
       throw err;
     }
   },
