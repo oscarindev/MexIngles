@@ -1,0 +1,265 @@
+{
+  "unitSlug": "basics",
+  "unitTitleEs": "Lo Basico",
+  "unitTitleEn": "The Basics",
+  "unitIcon": "📚",
+  "level": "beginner",
+  "guidebookEs": "En esta unidad aprenderas las palabras y frases mas basicas del ingles americano. Empezaremos con saludos simples, presentaciones y expresiones cotidianas.",
+  "lessons": [
+    {
+      "slug": "greetings-1",
+      "titleEs": "Saludos Basicos",
+      "xpReward": 10,
+      "difficulty": 1,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "promptEs": "Como se dice 'Hola' en ingles?",
+          "correctAnswer": "Hello",
+          "options": { "choices": ["Hello", "Goodbye", "Please", "Sorry"] },
+          "audioText": "Hello",
+          "explanationEs": "'Hello' es la forma mas comun de decir 'Hola' en ingles.",
+          "difficulty": 1
+        },
+        {
+          "type": "multiple_choice",
+          "promptEs": "Como se dice 'Buenos dias' en ingles?",
+          "correctAnswer": "Good morning",
+          "options": { "choices": ["Good morning", "Good night", "Good evening", "Good afternoon"] },
+          "audioText": "Good morning",
+          "explanationEs": "'Good morning' se usa desde que amanece hasta el mediodia.",
+          "difficulty": 1
+        },
+        {
+          "type": "listening",
+          "promptEs": "Escucha y selecciona lo que oyes",
+          "correctAnswer": "Hi, how are you?",
+          "options": { "choices": ["Hi, how are you?", "Hi, where are you?", "Hi, who are you?", "Hi, what are you?"], "mode": "select" },
+          "audioText": "Hi, how are you?",
+          "difficulty": 1
+        },
+        {
+          "type": "translation",
+          "promptEs": "Buenas tardes",
+          "correctAnswer": "Good afternoon",
+          "acceptedAnswers": ["good afternoon"],
+          "hintEs": "Good = bueno/a, Afternoon = tarde",
+          "audioText": "Good afternoon",
+          "difficulty": 1
+        },
+        {
+          "type": "matching",
+          "promptEs": "Conecta cada saludo en ingles con su traduccion",
+          "correctAnswer": "all_matched",
+          "options": {
+            "pairs": [
+              { "en": "Hello", "es": "Hola" },
+              { "en": "Good morning", "es": "Buenos dias" },
+              { "en": "Good night", "es": "Buenas noches" },
+              { "en": "Goodbye", "es": "Adios" }
+            ]
+          },
+          "difficulty": 1
+        },
+        {
+          "type": "word_order",
+          "promptEs": "Como estas?",
+          "correctAnswer": "How are you?",
+          "options": { "words": ["are", "How", "you?"] },
+          "difficulty": 1
+        },
+        {
+          "type": "fill_blank",
+          "promptEs": "Estoy bien, gracias",
+          "promptEn": "I am ___, thank you",
+          "correctAnswer": "fine",
+          "acceptedAnswers": ["good", "well", "great", "okay"],
+          "explanationEs": "'Fine', 'good', 'well' y 'great' son formas de decir que estas bien.",
+          "difficulty": 1
+        },
+        {
+          "type": "translation",
+          "promptEs": "Mucho gusto",
+          "correctAnswer": "Nice to meet you",
+          "acceptedAnswers": ["nice to meet you", "pleased to meet you"],
+          "audioText": "Nice to meet you",
+          "difficulty": 1
+        }
+      ],
+      "vocabulary": [
+        { "wordEn": "hello", "wordEs": "hola", "partOfSpeech": "interjection", "exampleEn": "Hello, my name is Maria.", "exampleEs": "Hola, mi nombre es Maria.", "category": "greetings" },
+        { "wordEn": "goodbye", "wordEs": "adios", "partOfSpeech": "interjection", "exampleEn": "Goodbye, see you later!", "exampleEs": "Adios, nos vemos luego!", "category": "greetings" },
+        { "wordEn": "good morning", "wordEs": "buenos dias", "partOfSpeech": "phrase", "exampleEn": "Good morning! How are you?", "exampleEs": "Buenos dias! Como estas?", "category": "greetings" },
+        { "wordEn": "good afternoon", "wordEs": "buenas tardes", "partOfSpeech": "phrase", "category": "greetings" },
+        { "wordEn": "good night", "wordEs": "buenas noches", "partOfSpeech": "phrase", "category": "greetings" },
+        { "wordEn": "how are you", "wordEs": "como estas", "partOfSpeech": "phrase", "category": "greetings" },
+        { "wordEn": "fine", "wordEs": "bien", "partOfSpeech": "adjective", "category": "greetings" },
+        { "wordEn": "thank you", "wordEs": "gracias", "partOfSpeech": "phrase", "category": "greetings" },
+        { "wordEn": "please", "wordEs": "por favor", "partOfSpeech": "adverb", "category": "greetings" },
+        { "wordEn": "nice to meet you", "wordEs": "mucho gusto", "partOfSpeech": "phrase", "category": "greetings" }
+      ]
+    },
+    {
+      "slug": "introductions",
+      "titleEs": "Presentaciones",
+      "xpReward": 10,
+      "difficulty": 1,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "promptEs": "Como dices 'Me llamo Maria' en ingles?",
+          "correctAnswer": "My name is Maria",
+          "options": { "choices": ["My name is Maria", "I name Maria", "Me name Maria", "My Maria name"] },
+          "audioText": "My name is Maria",
+          "difficulty": 1
+        },
+        {
+          "type": "translation",
+          "promptEs": "Yo soy de Mexico",
+          "correctAnswer": "I am from Mexico",
+          "acceptedAnswers": ["I'm from Mexico", "i am from mexico"],
+          "hintEs": "I am = Yo soy, from = de",
+          "audioText": "I am from Mexico",
+          "difficulty": 1
+        },
+        {
+          "type": "fill_blank",
+          "promptEs": "Como te llamas?",
+          "promptEn": "What is your ___?",
+          "correctAnswer": "name",
+          "difficulty": 1
+        },
+        {
+          "type": "listening",
+          "promptEs": "Escucha y escribe lo que oyes",
+          "correctAnswer": "Where are you from?",
+          "acceptedAnswers": ["where are you from", "Where are you from?"],
+          "audioText": "Where are you from?",
+          "difficulty": 1
+        },
+        {
+          "type": "word_order",
+          "promptEs": "Yo tengo 25 anos",
+          "correctAnswer": "I am 25 years old",
+          "options": { "words": ["old", "I", "25", "am", "years"] },
+          "difficulty": 1
+        },
+        {
+          "type": "multiple_choice",
+          "promptEs": "Que significa 'I live in New York'?",
+          "correctAnswer": "Yo vivo en Nueva York",
+          "options": { "choices": ["Yo vivo en Nueva York", "Yo trabajo en Nueva York", "Yo naci en Nueva York", "Yo estudio en Nueva York"] },
+          "audioText": "I live in New York",
+          "difficulty": 1
+        },
+        {
+          "type": "translation",
+          "promptEs": "Encantado de conocerte",
+          "correctAnswer": "Nice to meet you",
+          "acceptedAnswers": ["nice to meet you", "pleased to meet you", "glad to meet you"],
+          "audioText": "Nice to meet you",
+          "difficulty": 1
+        },
+        {
+          "type": "matching",
+          "promptEs": "Conecta las frases",
+          "correctAnswer": "all_matched",
+          "options": {
+            "pairs": [
+              { "en": "My name is", "es": "Me llamo" },
+              { "en": "I am from", "es": "Soy de" },
+              { "en": "I live in", "es": "Vivo en" },
+              { "en": "years old", "es": "anos de edad" }
+            ]
+          },
+          "difficulty": 1
+        }
+      ],
+      "vocabulary": [
+        { "wordEn": "name", "wordEs": "nombre", "partOfSpeech": "noun", "exampleEn": "My name is Juan.", "exampleEs": "Mi nombre es Juan.", "category": "introductions" },
+        { "wordEn": "from", "wordEs": "de", "partOfSpeech": "preposition", "exampleEn": "I am from Mexico.", "exampleEs": "Soy de Mexico.", "category": "introductions" },
+        { "wordEn": "live", "wordEs": "vivir", "partOfSpeech": "verb", "exampleEn": "I live in Los Angeles.", "exampleEs": "Vivo en Los Angeles.", "category": "introductions" },
+        { "wordEn": "years old", "wordEs": "anos de edad", "partOfSpeech": "phrase", "category": "introductions" },
+        { "wordEn": "where", "wordEs": "donde", "partOfSpeech": "adverb", "category": "introductions" },
+        { "wordEn": "what", "wordEs": "que", "partOfSpeech": "pronoun", "category": "introductions" }
+      ]
+    },
+    {
+      "slug": "numbers-1",
+      "titleEs": "Numeros 1-20",
+      "xpReward": 10,
+      "difficulty": 1,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "promptEs": "Como se dice '5' en ingles?",
+          "correctAnswer": "Five",
+          "options": { "choices": ["Five", "Four", "Six", "Three"] },
+          "audioText": "Five",
+          "difficulty": 1
+        },
+        {
+          "type": "listening",
+          "promptEs": "Escucha y escribe el numero",
+          "correctAnswer": "thirteen",
+          "acceptedAnswers": ["13", "thirteen", "Thirteen"],
+          "audioText": "thirteen",
+          "difficulty": 1
+        },
+        {
+          "type": "matching",
+          "promptEs": "Conecta los numeros",
+          "correctAnswer": "all_matched",
+          "options": {
+            "pairs": [
+              { "en": "One", "es": "Uno" },
+              { "en": "Seven", "es": "Siete" },
+              { "en": "Ten", "es": "Diez" },
+              { "en": "Twenty", "es": "Veinte" }
+            ]
+          },
+          "difficulty": 1
+        },
+        {
+          "type": "translation",
+          "promptEs": "Tengo tres hijos",
+          "correctAnswer": "I have three children",
+          "acceptedAnswers": ["I have three kids", "I have 3 children", "I have 3 kids"],
+          "audioText": "I have three children",
+          "difficulty": 1
+        },
+        {
+          "type": "fill_blank",
+          "promptEs": "Mi numero de telefono es ocho, uno, cinco...",
+          "promptEn": "My phone ___ is eight, one, five...",
+          "correctAnswer": "number",
+          "difficulty": 1
+        },
+        {
+          "type": "multiple_choice",
+          "promptEs": "Cual es el numero 'fifteen'?",
+          "correctAnswer": "15",
+          "options": { "choices": ["15", "50", "14", "16"] },
+          "audioText": "fifteen",
+          "difficulty": 1
+        },
+        {
+          "type": "word_order",
+          "promptEs": "Necesito dos boletos",
+          "correctAnswer": "I need two tickets",
+          "options": { "words": ["tickets", "I", "two", "need"] },
+          "difficulty": 1
+        }
+      ],
+      "vocabulary": [
+        { "wordEn": "one", "wordEs": "uno", "partOfSpeech": "number", "category": "numbers" },
+        { "wordEn": "two", "wordEs": "dos", "partOfSpeech": "number", "category": "numbers" },
+        { "wordEn": "three", "wordEs": "tres", "partOfSpeech": "number", "category": "numbers" },
+        { "wordEn": "five", "wordEs": "cinco", "partOfSpeech": "number", "category": "numbers" },
+        { "wordEn": "ten", "wordEs": "diez", "partOfSpeech": "number", "category": "numbers" },
+        { "wordEn": "fifteen", "wordEs": "quince", "partOfSpeech": "number", "category": "numbers" },
+        { "wordEn": "twenty", "wordEs": "veinte", "partOfSpeech": "number", "category": "numbers" }
+      ]
+    }
+  ]
+}

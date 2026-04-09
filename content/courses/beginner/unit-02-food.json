@@ -1,0 +1,174 @@
+{
+  "unitSlug": "food-drinks",
+  "unitTitleEs": "Comida y Bebidas",
+  "unitTitleEn": "Food & Drinks",
+  "unitIcon": "🍔",
+  "level": "beginner",
+  "guidebookEs": "Aprende a pedir comida y bebidas en ingles. Estas lecciones te prepararan para ordenar en restaurantes, cafeterias y tiendas en Estados Unidos.",
+  "lessons": [
+    {
+      "slug": "ordering-food",
+      "titleEs": "Ordenar Comida",
+      "xpReward": 10,
+      "difficulty": 1,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "promptEs": "Como pides un cafe en ingles?",
+          "correctAnswer": "Can I have a coffee, please?",
+          "options": { "choices": ["Can I have a coffee, please?", "I want coffee now", "Give coffee me", "Coffee I need"] },
+          "audioText": "Can I have a coffee, please?",
+          "explanationEs": "'Can I have...' es una forma educada de pedir algo en ingles.",
+          "difficulty": 1
+        },
+        {
+          "type": "translation",
+          "promptEs": "Quiero una hamburguesa con papas fritas",
+          "correctAnswer": "I want a hamburger with french fries",
+          "acceptedAnswers": ["I want a burger with fries", "I'd like a hamburger with french fries", "I would like a hamburger with fries"],
+          "audioText": "I want a hamburger with french fries",
+          "difficulty": 1
+        },
+        {
+          "type": "listening",
+          "promptEs": "Escucha y selecciona lo que pidio",
+          "correctAnswer": "A large pizza with cheese",
+          "options": { "choices": ["A large pizza with cheese", "A small pizza with cheese", "A large pasta with cheese", "A large pizza with meat"], "mode": "select" },
+          "audioText": "A large pizza with cheese",
+          "difficulty": 1
+        },
+        {
+          "type": "matching",
+          "promptEs": "Conecta la comida con su nombre en ingles",
+          "correctAnswer": "all_matched",
+          "options": {
+            "pairs": [
+              { "en": "Water", "es": "Agua" },
+              { "en": "Chicken", "es": "Pollo" },
+              { "en": "Rice", "es": "Arroz" },
+              { "en": "Bread", "es": "Pan" }
+            ]
+          },
+          "difficulty": 1
+        },
+        {
+          "type": "fill_blank",
+          "promptEs": "La cuenta, por favor",
+          "promptEn": "The ___, please",
+          "correctAnswer": "check",
+          "acceptedAnswers": ["bill"],
+          "explanationEs": "En EE.UU. se dice 'check' para pedir la cuenta. En otros paises de habla inglesa se usa 'bill'.",
+          "difficulty": 1
+        },
+        {
+          "type": "word_order",
+          "promptEs": "Me gustaria un vaso de agua",
+          "correctAnswer": "I would like a glass of water",
+          "options": { "words": ["water", "I", "a", "would", "glass", "like", "of"] },
+          "difficulty": 2
+        },
+        {
+          "type": "multiple_choice",
+          "promptEs": "Que significa 'I'm starving'?",
+          "correctAnswer": "Tengo mucha hambre",
+          "options": { "choices": ["Tengo mucha hambre", "Estoy enfermo", "Estoy cansado", "Tengo mucha sed"] },
+          "audioText": "I'm starving",
+          "explanationEs": "'I'm starving' es una expresion informal para decir que tienes MUCHA hambre. Es una exageracion comun en ingles americano.",
+          "difficulty": 1
+        }
+      ],
+      "vocabulary": [
+        { "wordEn": "coffee", "wordEs": "cafe", "partOfSpeech": "noun", "category": "food" },
+        { "wordEn": "water", "wordEs": "agua", "partOfSpeech": "noun", "category": "food" },
+        { "wordEn": "hamburger", "wordEs": "hamburguesa", "partOfSpeech": "noun", "category": "food" },
+        { "wordEn": "french fries", "wordEs": "papas fritas", "partOfSpeech": "noun", "category": "food" },
+        { "wordEn": "pizza", "wordEs": "pizza", "partOfSpeech": "noun", "category": "food" },
+        { "wordEn": "chicken", "wordEs": "pollo", "partOfSpeech": "noun", "category": "food" },
+        { "wordEn": "rice", "wordEs": "arroz", "partOfSpeech": "noun", "category": "food" },
+        { "wordEn": "bread", "wordEs": "pan", "partOfSpeech": "noun", "category": "food" },
+        { "wordEn": "check", "wordEs": "cuenta", "partOfSpeech": "noun", "exampleEn": "Can I get the check?", "exampleEs": "Me trae la cuenta?", "category": "restaurant" },
+        { "wordEn": "hungry", "wordEs": "hambriento", "partOfSpeech": "adjective", "category": "food" },
+        { "wordEn": "thirsty", "wordEs": "sediento", "partOfSpeech": "adjective", "category": "food" }
+      ]
+    },
+    {
+      "slug": "at-restaurant",
+      "titleEs": "En el Restaurante",
+      "xpReward": 10,
+      "difficulty": 2,
+      "exercises": [
+        {
+          "type": "multiple_choice",
+          "promptEs": "El mesero dice: 'Are you ready to order?' Que significa?",
+          "correctAnswer": "Estan listos para ordenar?",
+          "options": { "choices": ["Estan listos para ordenar?", "Quieren la cuenta?", "Quieren postre?", "Estan listos para irse?"] },
+          "audioText": "Are you ready to order?",
+          "difficulty": 1
+        },
+        {
+          "type": "translation",
+          "promptEs": "Mesa para dos, por favor",
+          "correctAnswer": "Table for two, please",
+          "acceptedAnswers": ["A table for two, please", "table for two please", "A table for 2, please"],
+          "audioText": "Table for two, please",
+          "difficulty": 1
+        },
+        {
+          "type": "fill_blank",
+          "promptEs": "Como complemento, quiero ensalada",
+          "promptEn": "For my ___, I'll have a salad",
+          "correctAnswer": "side",
+          "explanationEs": "'Side' se refiere a un acompanamiento o complemento de la comida principal.",
+          "difficulty": 2
+        },
+        {
+          "type": "listening",
+          "promptEs": "Escucha y escribe lo que dice el mesero",
+          "correctAnswer": "How would you like your steak?",
+          "acceptedAnswers": ["how would you like your steak", "How would you like your steak?"],
+          "audioText": "How would you like your steak?",
+          "difficulty": 2
+        },
+        {
+          "type": "matching",
+          "promptEs": "Conecta las frases del restaurante",
+          "correctAnswer": "all_matched",
+          "options": {
+            "pairs": [
+              { "en": "Menu", "es": "Carta/Menu" },
+              { "en": "Tip", "es": "Propina" },
+              { "en": "Waiter", "es": "Mesero" },
+              { "en": "Appetizer", "es": "Entrada" }
+            ]
+          },
+          "difficulty": 1
+        },
+        {
+          "type": "word_order",
+          "promptEs": "Puedo ver el menu, por favor?",
+          "correctAnswer": "Can I see the menu please?",
+          "options": { "words": ["menu", "Can", "see", "I", "the", "please?"] },
+          "difficulty": 1
+        },
+        {
+          "type": "multiple_choice",
+          "promptEs": "En EE.UU., cuanto es la propina tipica?",
+          "correctAnswer": "15-20% del total",
+          "options": { "choices": ["15-20% del total", "5% del total", "No se deja propina", "10 dolares siempre"] },
+          "explanationEs": "En Estados Unidos, la propina (tip) es muy importante. Lo normal es dejar entre 15-20% del total de la cuenta.",
+          "difficulty": 1
+        }
+      ],
+      "vocabulary": [
+        { "wordEn": "menu", "wordEs": "menu/carta", "partOfSpeech": "noun", "category": "restaurant" },
+        { "wordEn": "waiter", "wordEs": "mesero", "partOfSpeech": "noun", "category": "restaurant" },
+        { "wordEn": "tip", "wordEs": "propina", "partOfSpeech": "noun", "exampleEn": "The tip was 20%.", "exampleEs": "La propina fue del 20%.", "category": "restaurant" },
+        { "wordEn": "appetizer", "wordEs": "entrada/aperitivo", "partOfSpeech": "noun", "category": "restaurant" },
+        { "wordEn": "side", "wordEs": "acompanamiento", "partOfSpeech": "noun", "category": "restaurant" },
+        { "wordEn": "steak", "wordEs": "bistec/carne", "partOfSpeech": "noun", "category": "food" },
+        { "wordEn": "salad", "wordEs": "ensalada", "partOfSpeech": "noun", "category": "food" },
+        { "wordEn": "dessert", "wordEs": "postre", "partOfSpeech": "noun", "category": "food" }
+      ]
+    }
+  ]
+}
