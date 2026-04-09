@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Platform } from 'react-native';
 import { useLessonStore } from '../../stores/useLessonStore';
 import { useGamificationStore } from '../../stores/useGamificationStore';
 import { useAuthStore } from '../../stores/useAuthStore';
@@ -132,17 +132,19 @@ export function ExerciseRunner({ onComplete, onQuit }: ExerciseRunnerProps) {
         onClose={onQuit}
       />
 
-      <View style={styles.exerciseContent}>
-        {sessionState !== 'feedback' && renderExercise(currentExercise)}
-      </View>
-
-      {sessionState === 'feedback' && lastResult && (
-        <ExerciseFeedback
-          isCorrect={lastResult.isCorrect}
-          correctAnswer={lastResult.isCorrect ? undefined : lastResult.correctAnswer}
-          explanation={lastResult.explanation}
-          onContinue={handleContinue}
-        />
+      {sessionState === 'feedback' && lastResult ? (
+        <View style={styles.feedbackContainer}>
+          <ExerciseFeedback
+            isCorrect={lastResult.isCorrect}
+            correctAnswer={lastResult.isCorrect ? undefined : lastResult.correctAnswer}
+            explanation={lastResult.explanation}
+            onContinue={handleContinue}
+          />
+        </View>
+      ) : (
+        <View style={styles.exerciseContent}>
+          {renderExercise(currentExercise)}
+        </View>
       )}
     </View>
   );
@@ -152,8 +154,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.background,
-  },
+    ...(Platform.OS === 'web' ? { height: '100vh' } : {}),
+  } as any,
   exerciseContent: {
     flex: 1,
+  },
+  feedbackContainer: {
+    flex: 1,
+    justifyContent: 'flex-end',
   },
 });
