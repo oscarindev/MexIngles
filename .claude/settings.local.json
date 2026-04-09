@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-expo-app@latest . --template blank-typescript)",
+      "Read(//c/Users/trade/**)",
+      "Bash(npx create-expo-app@latest MexInglesApp --template blank-typescript)",
+      "Bash(cp -r /c/Users/trade/MexInglesApp/* /c/Users/trade/MexIngles/)",
+      "Bash(cp /c/Users/trade/MexInglesApp/.gitignore /c/Users/trade/MexIngles/)",
+      "Bash(cp /c/Users/trade/MexInglesApp/package.json /c/Users/trade/MexIngles/)",
+      "Bash(cp /c/Users/trade/MexInglesApp/tsconfig.json /c/Users/trade/MexIngles/)",
+      "Bash(npx expo:*)",
+      "Bash(npm install:*)",
+      "Bash(npm view:*)",
+      "Bash(npx tsc:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(gh auth:*)"
+    ]
+  }
+}
